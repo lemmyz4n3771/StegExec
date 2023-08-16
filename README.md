@@ -1,8 +1,8 @@
 ## StegExec
 
-This is a PoC of how potentially malicious code may be hidden in an image file to then be executed within an innocent program. Its approach is to change the least-significant bit of an image file to write Python code which can then later be extracted and executed from the encoded image.
+This is a PoC of how potentially malicious code may be hidden in an image file (via steganography) to then be executed within an innocent program. Its approach is to change the least-significant bit of an image file to write Python code which can then later be extracted and executed from the encoded image.
 
-Under the right conditions, it is possible to use this approach to gain initial compromise (through phishing) or to establish persistence, so prepare accordingly with tools to check files hidden within images to prevent this sort of attack. Not all tools (e.g. steghide) support checking PNG files for embedded files, which this tool implements.
+Under the right conditions, it is possible to use this approach to gain initial compromise (through phishing) or to establish persistence, so prepare accordingly with tools to check files hidden within images to prevent this sort of attack. Be aware that not all tools (e.g. steghide) support checking PNG files for embedded files, which this tool implements, so to that extent, malicious code can go undetected through this method.
 
 The code is well-documented with verbose output for demonstration purposes. For example, to encode a Python reverse shell:
 
