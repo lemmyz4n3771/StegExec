@@ -198,7 +198,7 @@ def binToChr(bin_str: str):
 
 def main():
 
-    pa = argparse.ArgumentParser(prog='ProgramName', description='What the program does', epilog='Text at the bottom of help')
+    pa = argparse.ArgumentParser(prog='StegExec', description='Execute python code as images')
     
     pa.add_argument("-e", "--encode", help="set mode to encode (specify png image)", action="store_true")
     pa.add_argument("-f", "--file", help="python script to encode")
